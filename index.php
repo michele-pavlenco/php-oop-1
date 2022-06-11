@@ -60,6 +60,7 @@ $movies = [
         </div>
     </main>
 
+    
 </body>
 
 </html>
