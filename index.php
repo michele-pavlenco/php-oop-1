@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once __DIR__ . '/Classes/movies.php';
 $movies = [
     [
@@ -23,40 +23,43 @@ $movies = [
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php oop 1</title>
 </head>
+
 <body>
     <main>
         <div class="container">
-           <?php
-                foreach ($movies as $key => $value) { 
-                    $new_movie = new Movie($value['titolo'], $value['genere'], $value['trama']);   
-                     //echo $movie->getGenere()
-           ?>
-            <h1>
-                <?php echo $new_movie->getTitolo(); ?>
-            </h1>
-            <span>
-                <p style="color:red">
-                    Genere: 
-                </p>
-                <?php echo $new_movie->getGenere(); ?>
-            </span>
-            <span>
-                <p style="color:red">
-                    Trama: 
-                </p>
-                <?php echo $new_movie->getTrama(); ?>
-            </span>
+            <?php
+            foreach ($movies as $key => $value) {
+                $new_movie = new Movie($value['titolo'], $value['genere'], $value['trama']);
+                //echo $movie->getGenere()
+            ?>
+                <h1>
+                    <?php echo $new_movie->getTitolo(); ?>
+                </h1>
+                <span>
+                    <p style="color:red">
+                        Genere:
+                    </p>
+                    <?php echo $new_movie->getGenere(); ?>
+                </span>
+                <span>
+                    <p style="color:red">
+                        Trama:
+                    </p>
+                    <?php echo $new_movie->getTrama(); ?>
+                </span>
 
-<?php } ?>
+            <?php } ?>
 
         </div>
     </main>
-    
+
 </body>
+
 </html>
